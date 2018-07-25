@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+
+
+<form id="form1">
+    <input type="text" id="name" name="name" />
+
+    <input type="file" name="fileUpload" id="fileUpload" />
+    <input type="button" id="btnUploadFile" value="Go" />
+</form>
+
+
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        function GetSignatureS(s) {
+            var sum = 0;
+            sum = (s.toString().length) * 25;
+            sum = sum * sum;
+            return sum.toString();
+        }
+
+        $('#btnUploadFile').on('click', function () {
+
+
+            var url = "http://localhost:50554/api/fake/Get?id=566556";
+            var res = GetSignatureS(url);  //Must Be Server Side 
+            $.ajax({
+                type: "GET",
+                url:url,
+                async: false,
+                headers: {
+                    "Authorization": "Basic UGFzc05BU0FQSUBOYXNBUElVc2VyMTIzQFBhc3M6TmFzQVBJVXNlcjEyM0B1c2Vy#" + res
+                },
+                cache: false,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                }
+            });
+
+            //var data = new FormData();
+
+            //var files = $("#fileUpload").get(0).files;
+
+            //// Add the uploaded image content to the form data collection
+            //if (files.length > 0) {
+            //    data.append("UploadedImage", files[0]);
+            //}
+
+            //var name =$("#name").val();
+
+            //// Make Ajax request with the contentType = false, and procesDate = false
+            //var ajaxRequest = $.ajax({
+            //    type: "POST",
+            //    url: "/api/account?FullName=basma&Nationality=3a822eeb-5f77-e311-8f5a-00155d010303&IdNumber=1234&Password=123456&MobileNumber=01245678&gender=2&Email=basma@yahoo.com",
+            //    contentType: false,
+            //    processData: false,
+            //    data: data
+            //});
+
+            //ajaxRequest.done(function (xhr, textStatus) {
+            //    // Do other operation
+            //});
+
+        });
+    });
+  
+</script>

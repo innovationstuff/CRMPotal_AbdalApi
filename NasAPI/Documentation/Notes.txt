@@ -1,0 +1,9 @@
+﻿ ============ The Used Api Actions >> in Google Sheet ========================
+ https://docs.google.com/spreadsheets/d/1Nz3PAFzrEBhZHfhpAV6p5R6l8gO0Gb8N28wmnZX5HW0/edit?usp=sharing
+
+ ============ The Swaggar documentation Url ==================================
+ /swagger
+ example: 
+ http://52.178.190.129:8003/swagger
+
+ =============================================================================

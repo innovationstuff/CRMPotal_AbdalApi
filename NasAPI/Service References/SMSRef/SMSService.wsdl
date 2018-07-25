@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendSingleSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTagName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecepientNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSingleSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendSingleSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendInternationalSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTagName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecepientNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendInternationalSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendInternationalSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCustomBulkSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTagName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecepientNumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMessage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VarsList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReplacementList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCustomBulkSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendCustomBulkSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendBulkSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTagName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecepientNumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendBulkSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendBulkSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCredit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsServiceAlive">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsServiceAliveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsServiceAliveResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCodeDescription">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCodeDescriptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCodeDescriptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendSingleSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSingleSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendSingleSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSingleSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendInternationalSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendInternationalSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendInternationalSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendInternationalSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomBulkSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendCustomBulkSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomBulkSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendCustomBulkSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendBulkSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendBulkSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCredit" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsServiceAliveSoapIn">
+    <wsdl:part name="parameters" element="tns:IsServiceAlive" />
+  </wsdl:message>
+  <wsdl:message name="IsServiceAliveSoapOut">
+    <wsdl:part name="parameters" element="tns:IsServiceAliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCodeDescriptionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCodeDescription" />
+  </wsdl:message>
+  <wsdl:message name="GetCodeDescriptionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCodeDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSingleSMSHttpGetIn">
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+    <wsdl:part name="strTagName" type="s:string" />
+    <wsdl:part name="strRecepientNumber" type="s:string" />
+    <wsdl:part name="strMessage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSingleSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendInternationalSMSHttpGetIn">
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+    <wsdl:part name="strTagName" type="s:string" />
+    <wsdl:part name="strRecepientNumber" type="s:string" />
+    <wsdl:part name="strMessage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendInternationalSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomBulkSMSHttpGetIn">
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+    <wsdl:part name="strTagName" type="s:string" />
+    <wsdl:part name="strRecepientNumbers" type="s:string" />
+    <wsdl:part name="strMessage" type="s:string" />
+    <wsdl:part name="VarsList" type="s:string" />
+    <wsdl:part name="ReplacementList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomBulkSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSHttpGetIn">
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+    <wsdl:part name="strTagName" type="s:string" />
+    <wsdl:part name="strRecepientNumbers" type="s:string" />
+    <wsdl:part name="strMessage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditHttpGetIn">
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IsServiceAliveHttpGetIn" />
+  <wsdl:message name="IsServiceAliveHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetCodeDescriptionHttpGetIn">
+    <wsdl:part name="Code" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCodeDescriptionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSingleSMSHttpPostIn">
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+    <wsdl:part name="strTagName" type="s:string" />
+    <wsdl:part name="strRecepientNumber" type="s:string" />
+    <wsdl:part name="strMessage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSingleSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendInternationalSMSHttpPostIn">
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+    <wsdl:part name="strTagName" type="s:string" />
+    <wsdl:part name="strRecepientNumber" type="s:string" />
+    <wsdl:part name="strMessage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendInternationalSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomBulkSMSHttpPostIn">
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+    <wsdl:part name="strTagName" type="s:string" />
+    <wsdl:part name="strRecepientNumbers" type="s:string" />
+    <wsdl:part name="strMessage" type="s:string" />
+    <wsdl:part name="VarsList" type="s:string" />
+    <wsdl:part name="ReplacementList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomBulkSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSHttpPostIn">
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+    <wsdl:part name="strTagName" type="s:string" />
+    <wsdl:part name="strRecepientNumbers" type="s:string" />
+    <wsdl:part name="strMessage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendBulkSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditHttpPostIn">
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IsServiceAliveHttpPostIn" />
+  <wsdl:message name="IsServiceAliveHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetCodeDescriptionHttpPostIn">
+    <wsdl:part name="Code" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCodeDescriptionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="SMSServiceSoap">
+    <wsdl:operation name="SendSingleSMS">
+      <wsdl:input message="tns:SendSingleSMSSoapIn" />
+      <wsdl:output message="tns:SendSingleSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendInternationalSMS">
+      <wsdl:input message="tns:SendInternationalSMSSoapIn" />
+      <wsdl:output message="tns:SendInternationalSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomBulkSMS">
+      <wsdl:input message="tns:SendCustomBulkSMSSoapIn" />
+      <wsdl:output message="tns:SendCustomBulkSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <wsdl:input message="tns:SendBulkSMSSoapIn" />
+      <wsdl:output message="tns:SendBulkSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredit">
+      <wsdl:input message="tns:GetCreditSoapIn" />
+      <wsdl:output message="tns:GetCreditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsServiceAlive">
+      <wsdl:input message="tns:IsServiceAliveSoapIn" />
+      <wsdl:output message="tns:IsServiceAliveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescription">
+      <wsdl:input message="tns:GetCodeDescriptionSoapIn" />
+      <wsdl:output message="tns:GetCodeDescriptionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SMSServiceHttpGet">
+    <wsdl:operation name="SendSingleSMS">
+      <wsdl:input message="tns:SendSingleSMSHttpGetIn" />
+      <wsdl:output message="tns:SendSingleSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendInternationalSMS">
+      <wsdl:input message="tns:SendInternationalSMSHttpGetIn" />
+      <wsdl:output message="tns:SendInternationalSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomBulkSMS">
+      <wsdl:input message="tns:SendCustomBulkSMSHttpGetIn" />
+      <wsdl:output message="tns:SendCustomBulkSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <wsdl:input message="tns:SendBulkSMSHttpGetIn" />
+      <wsdl:output message="tns:SendBulkSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredit">
+      <wsdl:input message="tns:GetCreditHttpGetIn" />
+      <wsdl:output message="tns:GetCreditHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsServiceAlive">
+      <wsdl:input message="tns:IsServiceAliveHttpGetIn" />
+      <wsdl:output message="tns:IsServiceAliveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescription">
+      <wsdl:input message="tns:GetCodeDescriptionHttpGetIn" />
+      <wsdl:output message="tns:GetCodeDescriptionHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SMSServiceHttpPost">
+    <wsdl:operation name="SendSingleSMS">
+      <wsdl:input message="tns:SendSingleSMSHttpPostIn" />
+      <wsdl:output message="tns:SendSingleSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendInternationalSMS">
+      <wsdl:input message="tns:SendInternationalSMSHttpPostIn" />
+      <wsdl:output message="tns:SendInternationalSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomBulkSMS">
+      <wsdl:input message="tns:SendCustomBulkSMSHttpPostIn" />
+      <wsdl:output message="tns:SendCustomBulkSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <wsdl:input message="tns:SendBulkSMSHttpPostIn" />
+      <wsdl:output message="tns:SendBulkSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredit">
+      <wsdl:input message="tns:GetCreditHttpPostIn" />
+      <wsdl:output message="tns:GetCreditHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsServiceAlive">
+      <wsdl:input message="tns:IsServiceAliveHttpPostIn" />
+      <wsdl:output message="tns:IsServiceAliveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescription">
+      <wsdl:input message="tns:GetCodeDescriptionHttpPostIn" />
+      <wsdl:output message="tns:GetCodeDescriptionHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SMSServiceSoap" type="tns:SMSServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendSingleSMS">
+      <soap:operation soapAction="http://tempuri.org/SendSingleSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendInternationalSMS">
+      <soap:operation soapAction="http://tempuri.org/SendInternationalSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomBulkSMS">
+      <soap:operation soapAction="http://tempuri.org/SendCustomBulkSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <soap:operation soapAction="http://tempuri.org/SendBulkSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredit">
+      <soap:operation soapAction="http://tempuri.org/GetCredit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsServiceAlive">
+      <soap:operation soapAction="http://tempuri.org/IsServiceAlive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescription">
+      <soap:operation soapAction="http://tempuri.org/GetCodeDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSServiceSoap12" type="tns:SMSServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendSingleSMS">
+      <soap12:operation soapAction="http://tempuri.org/SendSingleSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendInternationalSMS">
+      <soap12:operation soapAction="http://tempuri.org/SendInternationalSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomBulkSMS">
+      <soap12:operation soapAction="http://tempuri.org/SendCustomBulkSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <soap12:operation soapAction="http://tempuri.org/SendBulkSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredit">
+      <soap12:operation soapAction="http://tempuri.org/GetCredit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsServiceAlive">
+      <soap12:operation soapAction="http://tempuri.org/IsServiceAlive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescription">
+      <soap12:operation soapAction="http://tempuri.org/GetCodeDescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSServiceHttpGet" type="tns:SMSServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SendSingleSMS">
+      <http:operation location="/SendSingleSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendInternationalSMS">
+      <http:operation location="/SendInternationalSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomBulkSMS">
+      <http:operation location="/SendCustomBulkSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <http:operation location="/SendBulkSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredit">
+      <http:operation location="/GetCredit" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsServiceAlive">
+      <http:operation location="/IsServiceAlive" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescription">
+      <http:operation location="/GetCodeDescription" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSServiceHttpPost" type="tns:SMSServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SendSingleSMS">
+      <http:operation location="/SendSingleSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendInternationalSMS">
+      <http:operation location="/SendInternationalSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomBulkSMS">
+      <http:operation location="/SendCustomBulkSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBulkSMS">
+      <http:operation location="/SendBulkSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredit">
+      <http:operation location="/GetCredit" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsServiceAlive">
+      <http:operation location="/IsServiceAlive" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCodeDescription">
+      <http:operation location="/GetCodeDescription" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SMSService">
+    <wsdl:port name="SMSServiceSoap" binding="tns:SMSServiceSoap">
+      <soap:address location="http://sms966.com/YamamahWebServiceV2.0/SMSService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSServiceSoap12" binding="tns:SMSServiceSoap12">
+      <soap12:address location="http://sms966.com/YamamahWebServiceV2.0/SMSService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSServiceHttpGet" binding="tns:SMSServiceHttpGet">
+      <http:address location="http://sms966.com/YamamahWebServiceV2.0/SMSService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSServiceHttpPost" binding="tns:SMSServiceHttpPost">
+      <http:address location="http://sms966.com/YamamahWebServiceV2.0/SMSService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

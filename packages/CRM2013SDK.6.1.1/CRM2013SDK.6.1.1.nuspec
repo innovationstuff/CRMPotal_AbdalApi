@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>CRM2013SDK</id>
+    <version>6.1.1</version>
+    <title>Microsoft Dynamics CRM 2013 SDK</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package contains the Microsoft.Xrm.Sdk.dll assembly for Microsoft Dynamics CRM 2013.</description>
+    <summary>This package contains the Microsoft.Xrm.Sdk.dll assembly for Microsoft Dynamics CRM 2013.</summary>
+  </metadata>
+</package>

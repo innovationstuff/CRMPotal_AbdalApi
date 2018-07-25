@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Crm.Sdk.Proxy.2011</id>
+    <version>5.0.18</version>
+    <title>Microsoft CRM 2011 Proxy DLL</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/en-us/download/confirmation.aspx?id=24004</licenseUrl>
+    <projectUrl>http://msdn.microsoft.com/en-us/dynamics/crm/jj937218.aspx</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package contains the Microsoft.Crm.Sdk.Proxy dll for Microsoft Dynamics CRM 2011. License available inside SDK download</description>
+    <summary />
+    <releaseNotes />
+    <copyright>Copyright 2014</copyright>
+    <tags>Microsoft CRM 2011 SDK XRM</tags>
+  </metadata>
+</package>

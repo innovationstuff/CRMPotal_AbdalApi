@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NasAPI</name>
+    </assembly>
+    <members>
+        <member name="M:NasAPI.Controllers.API.ContactController.Post(NasAPI.Models.Contact)">
+            <summary>
+            Post Contact to CRM.
+            </summary>
+            <remarks>
+            Register new Contact in Portal DB >> then add the contact to CRM 
+            it will search by mobile phone in CRM then if exists, it returns the object with the GUID  or 
+            if not exists, Add to CRM DB
+            </remarks>
+            <param name="contact"> contact </param>
+            <returns> the Same Contact Object with GUID </returns>
+            <response>code:200 the Same Contact Object with GUID  </response>
+        </member>
+        <member name="M:NasAPI.Controllers.API.ContactController.Get(System.String)">
+            <summary>
+            Get Contact data by CRM GUID
+            </summary>
+            <remarks>Get Contact data by CRM GUID</remarks>
+            <param name="id">CRM GUID</param>
+            <returns>Contact</returns>
+        </member>
+        <member name="M:NasAPI.Controllers.API.ContactController.GetDetails(System.String)">
+            <summary>
+            Get Contact data by CRM GUID
+            </summary>
+            <remarks>Get Contact data by CRM GUID</remarks>
+            <param name="id">CRM GUID</param>
+            <returns>Contact</returns>
+        </member>
+        <member name="M:NasAPI.Controllers.API.IndivContractController.GetPricingNationalities">
+               /api/IndivContract/GetPricingNationalities
+        </member>
+        <member name="M:NasAPI.Controllers.API.IndivContractController.GetPricingByNationality(System.String)">
+               /api/IndivContract/GetPricingByNationality?id=CC0DF838-292F-E311-B3FD-00155D010303
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:NasAPI.Controllers.API.ProfileController.GetHourlyContracts(System.String,System.String)" -->
+        <member name="M:NasAPI.Managers.GlobalCrmManager.GetOptionSetLookup(System.String,System.String,NasAPI.Settings.UserLanguage,System.String)">
+            <summary>
+            modified by m.abdelrahman remove lang segment from query
+            </summary>
+            <param name="entityName"></param>
+            <param name="optionSetFieldName"></param>
+            <param name="lang"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NasAPI.Resources.ValidationsResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.AgreedToTerms">
+            <summary>
+              Looks up a localized string similar to You must agree the terms.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.Availabledays">
+            <summary>
+              Looks up a localized string similar to Enter Available days.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.CityId">
+            <summary>
+              Looks up a localized string similar to Enter the City.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.CodeRequired">
+            <summary>
+              Looks up a localized string similar to Please Enter Code.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.CompanyId">
+            <summary>
+              Looks up a localized string similar to Company is Required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.ComparePassword">
+            <summary>
+              Looks up a localized string similar to The password and confirmation password do not match..
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.ConfirmNewPassword">
+            <summary>
+              Looks up a localized string similar to The new password and confirmation password do not match..
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.ContactId">
+            <summary>
+              Looks up a localized string similar to Contact is Required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.ContractDuration">
+            <summary>
+              Looks up a localized string similar to Enter Contract Duration.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.ContractId">
+            <summary>
+              Looks up a localized string similar to Contract is Required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.CurrentPassword">
+            <summary>
+              Looks up a localized string similar to Enter Current Password.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.DistrictId">
+            <summary>
+              Looks up a localized string similar to Enter District.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.EmailRequired">
+            <summary>
+              Looks up a localized string similar to The Email Required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.Externalaccesstoken">
+            <summary>
+              Looks up a localized string similar to External access token required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.FullName">
+            <summary>
+              Looks up a localized string similar to Enter Full Name.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.GenderId">
+            <summary>
+              Looks up a localized string similar to Enter the Gender.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.IdNumber">
+            <summary>
+              Looks up a localized string similar to Enter Iqama Number.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.Jobs">
+            <summary>
+              Looks up a localized string similar to Jobs are Required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.JobTitle">
+            <summary>
+              Looks up a localized string similar to Enter Job Title.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.Loginprovider">
+            <summary>
+              Looks up a localized string similar to Login provider.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.Nationality">
+            <summary>
+              Looks up a localized string similar to Enter Nationality.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.NationalityId">
+            <summary>
+              Looks up a localized string similar to Enter the  Nationality.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.NewPassword">
+            <summary>
+              Looks up a localized string similar to New password is required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.NotValidIqama">
+            <summary>
+              Looks up a localized string similar to Iqama number Not Valid.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.NumberOfhours">
+            <summary>
+              Looks up a localized string similar to Enter Number Of hours.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.NumberOfvisits">
+            <summary>
+              Looks up a localized string similar to Enter Number Of visits.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.NumberOfworkers">
+            <summary>
+              Looks up a localized string similar to Enter Number Of workers.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.packages">
+            <summary>
+              Looks up a localized string similar to Select packages.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.Password">
+            <summary>
+              Looks up a localized string similar to Password is Required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.PasswordLength">
+            <summary>
+              Looks up a localized string similar to The password must be at least 6 characters long..
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.PhoneRequired">
+            <summary>
+              Looks up a localized string similar to Phone is Required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.ProblemDetails">
+            <summary>
+              Looks up a localized string similar to Ticket Details is Required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.ProblemTypeId">
+            <summary>
+              Looks up a localized string similar to Ticket type is Required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.Providerkey">
+            <summary>
+              Looks up a localized string similar to Provider key.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.RegionId">
+            <summary>
+              Looks up a localized string similar to Enter Region.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.RegisterComparePassword">
+            <summary>
+              Looks up a localized string similar to The password and confirmation password do not match..
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.RegisterFirstNameIsRequired">
+            <summary>
+              Looks up a localized string similar to FirstName is required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.RegisterLastNameIsRequired">
+            <summary>
+              Looks up a localized string similar to LastName is required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.RegisterMiddleNameIsRequired">
+            <summary>
+              Looks up a localized string similar to MiddleName is required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.RegisterNameIsRequired">
+            <summary>
+              Looks up a localized string similar to FullName is required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.RegisterPasswordIsRequired">
+            <summary>
+              Looks up a localized string similar to Password is required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.RegisterPhoneIsNotValed">
+            <summary>
+              Looks up a localized string similar to Entered Phone not valid.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.RegisterPhoneIsRequired">
+            <summary>
+              Looks up a localized string similar to MobilePhone is required.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.Startday">
+            <summary>
+              Looks up a localized string similar to Enter Start day.
+            </summary>
+        </member>
+        <member name="P:NasAPI.Resources.ValidationsResources.ValidDate">
+            <summary>
+              Looks up a localized string similar to Please Enter Valid Date.
+            </summary>
+        </member>
+        <member name="T:CRMAccessDB">
+            <summary>
+            Summary description for AccessDB
+            </summary>
+        </member>
+        <member name="M:GlobalCode.SimahLogRecord(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Auditing for simah in CRM
+            </summary>
+            <param name="UserID">User id in CRM</param>
+            <param name="UploadType">0- No Action 1- Regular 2- Excel 3-Default</param>
+            <param name="FileType">0- No Action 1 -Monthly 2- Weekly 3- Recovery Or Correction 4- Daily</param>
+            <param name="DidQuery">0- No Action 1- SCORE_ONLY 2- Review 3- New Application 4- Negative 5- Miscellaneous</param>
+        </member>
+        <member name="M:GlobalCode.SimahLogRecord(System.String,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Auditing for simah in CRM
+            </summary>
+            <param name="UserID">User id in CRM</param>
+            <param name="UploadType">0- No Action 1- Regular 2- Excel 3-Default</param>
+            <param name="FileType">0- No Action 1 -Monthly 2- Weekly 3- Recovery Or Correction 4- Daily</param>
+            <param name="DidQuery">0- No Action 1- SCORE_ONLY 2- Review 3- New Application 4- Negative 5- Miscellaneous</param>
+            <param name="Iqama">set iqama number</param>
+        </member>
+    </members>
+</doc>

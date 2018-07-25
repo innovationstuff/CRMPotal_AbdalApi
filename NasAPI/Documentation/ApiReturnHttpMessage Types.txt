@@ -1,0 +1,17 @@
+﻿أنواع ال results اللي بترجع من أي Api  :
+
+HttpStatusCode.OK : code 200
+في حالة success
+
+
+HttpStatusCode.NotFound: Code 404
+في حالة بتعمل get  ل 
+ entity  ب id  مش موجود 
+
+
+HttpStatusCode.BadRequest: Code 400
+في حالة ال model  مش  valid وهيرجع معاه ال modelstate
+
+
+HttpStatusCode.InternalServerError: Code 500 
+في حالة  حدوث  exception  ويرجع معاه ال exception msg
